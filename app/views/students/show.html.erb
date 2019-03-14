@@ -1,1 +1,10 @@
-<h1><%= @student.to_s %></h1>
+<h1><%= @student.to_s%></h1>
+
+
+<h1>.</h1>
+
+<p><%="This student is currently #{@active_value}."%></p>
+
+<form action="/students/<%=@student.id%>/activate" method="POST" style="margin: 0 auto">
+  <input type="hidden" name="_method" value="Activate" />
+    <input class="btn btn-danger" type="submit" value="Activate"/>
